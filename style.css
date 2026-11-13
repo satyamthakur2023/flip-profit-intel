@@ -4,31 +4,53 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:      #0b0d14;
-  --bg2:     #13161f;
-  --bg3:     #1c2030;
-  --bg4:     #252a3d;
-  --border:  #2a2f4a;
-  --border2: #353b5c;
-  --accent:  #7c6fff;
-  --accent2: #00e0b0;
-  --accent3: #ff5f6d;
-  --accent4: #ffc849;
-  --accent5: #4fc3f7;
-  --text:    #e4e8ff;
-  --text2:   #8890bb;
-  --text3:   #5c6380;
-  --green:   #00e0b0;
-  --red:     #ff5f6d;
-  --yellow:  #ffc849;
-  --blue:    #7c6fff;
-  --purple:  #b388ff;
-  --radius:  14px;
-  --radius-sm: 8px;
-  --shadow:  0 8px 32px rgba(0,0,0,0.5);
-  --shadow-sm: 0 2px 12px rgba(0,0,0,0.3);
-}
+  /* Surfaces & Backgrounds (Neutral Dark Base) */
+  --bg:          #0b0d14;
+  --bg2:         #13161f;
+  --bg3:         #1c2030;
+  --bg4:         #252a3d;
 
+  /* Borders & Dividers */
+  --border:      #2a2f4a;
+  --border2:     #353b5c;
+
+  /* Typography / Content Contrast */
+  --text:        #f4f6ff;   /* High-contrast primary text (WCAG AAA against --bg) */
+  --text2:       #a6c8ff;   /* Secondary descriptive text (IBM Blue 30) */
+  --text3:       #697089;   /* Muted / disabled metadata */
+
+  /* Primary Brand & Category Accents (IBM Carbon Categorical / Dark Theme) */
+  --accent:      #8a3ffc;   /* Primary Interactive (Purple 60) */
+  --accent-hover:#a56eff;   /* Purple 50 */
+  --accent2:     #08bdba;   /* Secondary Accent (Teal 40) */
+  --accent3:     #1192e8;   /* Information / Interactive Accent (Cyan 50) */
+  --accent4:     #ee538b;   /* Highlight Accent (Magenta 50) */
+  --accent5:     #33b1ff;   /* Sky / Focus Accent (Cyan 40) */
+
+  /* Semantic Alert Tokens (Accessible Dark Theme Calibration) */
+  --danger:      #fa4d56;   /* Danger / Error (Red 50) */
+  --warning:     #f1c21b;   /* Warning (Yellow 30) */
+  --warning-alt: #ff832b;   /* Severe Warning (Orange 40) */
+  --success:     #42be65;   /* Normal / Success (Green 40 - High contrast on dark) */
+  --info:        #4589ff;   /* Informational (Blue 50) */
+
+  /* Core Palette Tokens */
+  --red:         #fa4d56;   /* Red 50 */
+  --yellow:      #f1c21b;   /* Yellow 30 */
+  --green:       #42be65;   /* Green 40 */
+  --blue:        #4589ff;   /* Blue 50 */
+  --cyan:        #1192e8;   /* Cyan 50 */
+  --teal:        #009d9a;   /* Teal 50 */
+  --purple:      #a56eff;   /* Purple 50 */
+  --magenta:     #ee538b;   /* Magenta 50 */
+
+  /* Component Geometry & Elevation */
+  --radius:      12px;
+  --radius-sm:   6px;
+  --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow:      0 8px 24px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --focus-ring:  0 0 0 2px var(--bg), 0 0 0 4px #0f62fe;
+}
 body {
   background: var(--bg);
   color: var(--text);
